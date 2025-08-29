@@ -3,10 +3,8 @@ import pandas as pd
 import re
 import json
 
-# Vercel 서버에서는 이 경로만 허용
+# 경로는 반드시 이렇게!
 CSV_PATH = os.path.join(os.path.dirname(__file__), "pnu10.csv")
-
-# 전역으로 한 번만 로드
 df = pd.read_csv(CSV_PATH)
 
 def handler(request):
