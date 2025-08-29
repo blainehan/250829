@@ -1,11 +1,8 @@
 {
   "functions": {
-    "**/*.py": {
-      "runtime": "python3.11",
-      "includeFiles": "pnu10.csv"
+    "api/**/*.py": {
+      "runtime": "vercel-python@3.9",
+      "includeFiles": ["api/pnu10.csv"]
     }
-  },
-  "routes": [
-    { "src": "/(.*)", "dest": "/api/lookup.py" }
-  ]
+  }
 }
