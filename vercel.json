@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/lookup.py": {
+      "runtime": "python3.9"
+    }
+  }
+}
