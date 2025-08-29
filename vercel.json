@@ -1,8 +1,0 @@
-{
-  "functions": {
-    "api/**/*.py": {
-      "runtime": "vercel-python@3.9",
-      "includeFiles": "api/pnu10.csv"
-    }
-  }
-}
