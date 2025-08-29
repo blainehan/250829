@@ -1,9 +1,12 @@
 import os
-import re
 import pandas as pd
+import re
+import json
 
-# Vercel 서버에서 작동할 경로
+# Vercel 서버에서는 이 경로만 허용
 CSV_PATH = os.path.join(os.path.dirname(__file__), "pnu10.csv")
+
+# 전역으로 한 번만 로드
 df = pd.read_csv(CSV_PATH)
 
 def handler(request):
@@ -28,7 +31,6 @@ def handler(request):
         for _, row in matches.iterrows()
     ]
 
-    import json
     return {
         "statusCode": 200,
         "headers": {"Content-Type": "application/json"},
