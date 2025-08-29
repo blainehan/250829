@@ -1,10 +1,11 @@
 {
   "functions": {
-    "api/lookup.py": {
-      "runtime": "python3.9"
+    "**/*.py": {
+      "runtime": "python3.11",
+      "includeFiles": "pnu10.csv"
     }
   },
   "routes": [
-    { "src": "/api/.*", "dest": "/api/lookup.py" }
+    { "src": "/(.*)", "dest": "/api/lookup.py" }
   ]
 }
